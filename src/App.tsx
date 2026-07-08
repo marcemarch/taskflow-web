@@ -1,16 +1,4 @@
-/*function App() { 
-  return ( 
-  <div className="min-h-screen bg-slate-900 flex items-center justify-center"> 
-  < h1 className="text-4xl font-bold text-emerald-400">
-   ✅ Tailwind v4 funcionando 
-   </h1> 
-   </div> 
-   );
-  } 
-  export default App;
-  */
-
-  import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import LoginPage      from './pages/LoginPage';
@@ -40,3 +28,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+
