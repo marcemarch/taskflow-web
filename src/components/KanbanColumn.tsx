@@ -1,6 +1,6 @@
-import { Task, TaskStatus } from '../types';
+import type { Task, TaskStatus } from '../types';
 import { TaskCard } from './TaskCard';
-import { KanbanColumnConfig } from '../config/kanban';
+import type { KanbanColumnConfig } from '../config/kanban';
 interface Props {
     config: KanbanColumnConfig;
     tasks: Task[];

@@ -1,6 +1,10 @@
-import { useState, FormEvent, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import type { FormEvent } from 'react';
+
 import { tasksService } from '../api/tasks.service';
-import { Task } from '../types';
+
+import type { Task } from '../types';
+
 interface Props {
     projectId: string;
     onCreated: (task: Task) => void;

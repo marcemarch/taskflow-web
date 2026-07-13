@@ -1,5 +1,5 @@
 import api from './axios';
-import { ApiResponse, Task, CreateTaskData, UpdateTaskData } from '../types';
+import type { ApiResponse, Task, CreateTaskData, UpdateTaskData } from '../types';
 
 export const tasksService = {
     async getByProject(projectId: string): Promise<Task[]> {

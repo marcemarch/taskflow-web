@@ -1,4 +1,4 @@
-import { TaskStatus } from '../types';
+import type { TaskStatus } from '../types';
 export interface KanbanColumnConfig {
     id: TaskStatus;
     label: string;

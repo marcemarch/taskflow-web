@@ -2,10 +2,11 @@ import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectsService } from '../api/projects.service';
 import { tasksService } from '../api/tasks.service';
-import { Project, Task, TaskStatus } from '../types';
+import type { Project, Task, TaskStatus } from '../types';
 import { KANBAN_COLUMNS } from '../config/kanban';
 import { KanbanColumn } from '../components/KanbanColumn';
 import { CreateTaskModal } from '../components/CreateTaskModal';
+
 export default function ProjectDetailPage() {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
