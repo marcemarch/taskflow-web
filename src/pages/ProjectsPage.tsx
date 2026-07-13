@@ -37,15 +37,33 @@ export default function ProjectsPage() {
     };
     return (
         <div className="min-h-screen bg-slate-100">
-            <header className="bg-white border-b border-slate-200 px-6 py-4 flex
-justify-between items-center">
-                <h1 className="text-xl font-bold text-slate-800">Mis Proyectos</h1>
-                <button onClick={() => setShowModal(true)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-sm fontmedium
-px-4 py-2 rounded-lg transition">
+            <header className="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+
+                <div className="flex items-center gap-4">
+
+                    <button
+                        onClick={() => navigate('/dashboard')}
+                        className="text-slate-600 hover:text-blue-600 text-sm font-medium"
+                    >
+                        ← Dashboard
+                    </button>
+
+                    <h1 className="text-xl font-bold text-slate-800">
+                        Mis Proyectos
+                    </h1>
+
+                </div>
+
+
+                <button
+                    onClick={() => setShowModal(true)}
+                    className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+                >
                     + Nuevo Proyecto
                 </button>
+
             </header>
+
             <main className="max-w-6xl mx-auto p-6">
                 {loading && <div className="text-center py-12 text-slate-400">Cargando
                     proyectos...</div>}

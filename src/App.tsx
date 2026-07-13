@@ -19,13 +19,13 @@ export default function App() {
 
           {/* Rutas protegidas: usan <Outlet /> dentro de ProtectedRoute */}
           <Route element={<ProtectedRoute />}>
-            <Route path="/dashboard" element={<Navigate to="/projects" replace />}/>
+            <Route path="/dashboard" element={<DashboardPage />}/>
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:id" element={<ProjectDetailPage />} />
           </Route>
 
           {/* Raiz -> dashboard (si no autenticado, ProtectedRoute va a /login) */}
-          <Route path="/" element={<Navigate to="/projects" replace />} />
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
           {/* Cualquier ruta desconocida -> login */}
           <Route path="*" element={<Navigate to="/login" replace />} />
